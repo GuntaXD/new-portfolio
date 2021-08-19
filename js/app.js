@@ -115,3 +115,30 @@ particlesJS({
 
 //   funcionalidades navbar
 
+let navbar = document.querySelector(".navbar");
+let btn_menu = navbar.querySelector(".btn__menu");
+let links = navbar.getElementsByClassName("navbar__link");
+
+btn_menu.addEventListener("click" , ()=>{
+
+  let top = window.scrollY;
+  let active = navbar.querySelector(".active");
+
+  navbar.classList.toggle("active");
+  active.classList.remove("active");
+  links[ Math.round( top / window.innerHeight )].classList.toggle("active");
+
+});
+
+for(let i = 0; i < links.length ; i++ ){
+
+  links[i].addEventListener("click", ()=>{
+
+    let active = navbar.querySelector(".active");
+    active.classList.remove("active");
+    links[i].classList.toggle("active");
+    navbar.classList.toggle("active");
+    
+  });
+  
+}

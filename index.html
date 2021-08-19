@@ -3,18 +3,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Juan Diaz</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <header class="header">
-        <div id="particles-js"></div>
-        <nav class="navbar active">
+    <div id="particles-js"></div>
+    <header class="header grid" id="header">
+        <nav class="navbar">
             <ul class="navbar__links">
-                <li class="navbar__link active"><a href="#">Sobre mi</a></li>
-                <li class="navbar__link"><a href="#" >Proyectos</a></li>
-                <li class="navbar__link"><a href="#" >Curriculum</a></li>
-                <li class="navbar__link"><a href="#" >Contacto</a></li>
+                <li class="navbar__link active"><a href="#header">Sobre mi</a></li>
+                <li class="navbar__link"><a href="#uno" >Proyectos</a></li>
+                <li class="navbar__link"><a href="#dos" >Curriculum</a></li>
+                <li class="navbar__link"><a href="#tres" >Contacto</a></li>
                 <!-- <li>aqui va el boton de cambio de idioma</li> -->
             </ul>
             <div class="btn__menu">
@@ -24,7 +23,10 @@
             </div>
         </nav>
     </header>
-    <script src="particles.min.js"></script>
-    <script src="app.js"></script>
+    <section class="section uno" id="uno"></section>
+    <section class="section dos" id="dos"></section>
+    <section class="section tres" id="tres"></section>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
