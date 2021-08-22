@@ -32,6 +32,7 @@ body{
     position: relative;
     height: 100vh;
     width: 100%;
+    z-index: 9;
 }
 
 #particles-js{
@@ -168,24 +169,94 @@ body{
             top: 10px;
         }
 
-    /* ----------sobre mi------------------------ */
+    /* --------------------header-------------------------- */
 
-    .section{
-        height: 100vh;
+    .header__info{
+        height: calc(50vh - 80px );
         width: 100%;
+        padding: 80px 8% 0;
+        margin-bottom: 80px;
+        color: var(--white);
     }
 
-    .uno{
-        background-color: green;
+        .header__title{
+            font-size: clamp( 2em , calc( 2.2em + 1.2vw) , 3.4em );
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .header__paragraph{
+            margin: 1em 0;
+            font-size: clamp( 1em , calc( 1.2em + 1vw ) , 2em );
+            text-align: center;
+        }
+
+        .header__link{
+            display: flex;
+            height: 2.4em ;
+            width: 10em;
+            border: 4px solid var(--orange);
+            color: var(--orange);
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header__link:hover{
+            color: var(--grey);
+        }
+
+        .header__link::after{
+            content: "";
+            background: var(--orange);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: scaleX(0);
+            transition: all .4s ease-in-out;
+        }
+
+        .header__link:hover::after{
+            transform: scaleX(1);
+        }
+
+        .orange__letters{
+            color: var(--orange);
+        }
+
+    .header__img{
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
     }
 
-    .dos{
-        background-color: red;
-    }
+        .header__circle{
+            height: 70vw;
+            width: 70vw;
+            border-radius: 50%;
+            border: 4px solid var(--orange);
+            position: absolute;
+            top: calc( auto / 2);
+            left: 15vw;
+            z-index: 1;
+        }
 
-    .tres{
-        background-color: blue;
-    }
+        .img{
+            height: auto;
+            width: 90%;
+            position: absolute;
+            z-index: 2;
+        }
 
 /* 320 480 600 768 1024 1200 */
 
@@ -195,10 +266,27 @@ body{
 
 @media all and ( min-width: 480px ){
     
+    .header__circle{
+        height: 54vw;
+        width: 54vw;
+        left: 23vw;
+    }
 }
 
 @media all and ( min-width: 600px ){
     
+    .header__circle{
+        height: 44vw;
+        width: 44vw;
+        left: 28vw;
+    }
+
+    .img{
+        height: auto;
+        width: 70%;
+        position: absolute;
+        z-index: 2;
+    }
 }
 
 @media all and ( min-width: 768px ){
@@ -208,6 +296,8 @@ body{
         grid-template-columns: repeat( 12 , 1fr);
         column-gap: 20px;
     }
+
+    /* -------navbar--------------------- */
     
     .navbar{
         width: auto;
@@ -276,6 +366,80 @@ body{
     .btn__menu{
         display: none;
     }
+
+    /* ------------------header----------------------------------- */
+
+    .header__info{
+        height: 50vh;
+        padding: 0;
+        grid-column: 2/6;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 0;
+    }
+
+    .header__title{
+        text-align: left;
+    }
+
+    .header__paragraph{
+        text-align: left;
+    }
+
+    .header__link{
+        margin: 0;
+    }
+
+    .header__img{
+        grid-column: 7/12;
+    }
+
+    .img{
+        width: 100%;
+    }
+
+    .header__circle{
+        height: 54vh;
+        width: 54vh;
+        left: auto;
+    }
+
+    .header__link--relative{
+        display: block;
+        height: 3.2em;
+        width: 2em;
+        border: 2px solid var(--white);
+        border-radius: 100px;
+        position: absolute;
+        bottom: 1em;
+        left: calc(50% - .5em);
+    }
+
+    .header__link--img , .header__link--orange{
+        position: absolute;
+        height: 80%;
+        width: 100%;
+        top: 10%;
+    }
+
+    .header__link--orange{
+        opacity: 0;
+        animation: display 1.8s infinite ;
+    }
+
+    @keyframes display{
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+
 }
 
 @media all and ( min-width: 1024px ){
