@@ -203,7 +203,7 @@ body{
             font-weight: 600;
             margin: 0 auto;
             position: relative;
-            z-index: 10;
+            z-index: 1;
         }
 
         .header__link:hover{
@@ -257,6 +257,10 @@ body{
             position: absolute;
             z-index: 2;
         }
+
+    .header__link--relative{
+        display: none;
+    }
 
 /* 320 480 600 768 1024 1200 */
 
