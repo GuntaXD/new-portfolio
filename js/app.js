@@ -126,7 +126,7 @@ btn_menu.addEventListener("click" , ()=>{
 
   navbar.classList.toggle("active");
   active.classList.remove("active");
-  links[ Math.round( top / window.innerHeight )].classList.toggle("active");
+  links[ Math.floor( top / window.innerHeight )].classList.toggle("active");
 
 });
 
