@@ -443,6 +443,37 @@ body{
             transition: .8s;
         }
 
+/* --------------------footer----------------------------------- */
+
+.footer{
+    background-color: var(--grey);
+}
+
+.footer__container{
+    min-height: 200px;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+    .footer__message{
+        color: var(--white);
+        text-align: center;
+    }
+
+    .footer__social{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+        .footer__social--icon{
+            height: auto;
+            width: 20%;
+        }
+
 /* 320 480 600 768 1024 1200 */
 
 @media all and ( min-width: 320px ){
