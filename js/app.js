@@ -125,8 +125,9 @@ btn_menu.addEventListener("click" , ()=>{
   let active = navbar.querySelector(".active");
 
   navbar.classList.toggle("active");
-  active.classList.remove("active");
-  links[ Math.floor( top / window.innerHeight )].classList.toggle("active");
+  // active.classList.remove("active");
+  // links[ Math.floor( top / window.innerHeight )].classList.toggle("active");
+  // intento de activar el active en una opcion dependiendo de en que seccio estoy
 
 });
 
