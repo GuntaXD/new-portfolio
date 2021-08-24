@@ -29,6 +29,29 @@ body{
     font-family: 'roboto' , sans-serif;
 }
 
+/* estilos scroll bar */
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+body::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--dark-grey);
+}
+
 .header{
     position: relative;
     height: 100vh;
@@ -168,6 +191,28 @@ body{
         .navbar.active .span3{
             transform: rotate(-140deg);
             top: 10px;
+        }
+
+    .btn__traduccion{
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 4%;
+        z-index: 1000;
+    }
+
+        .btn__traduccion--img{
+            height: 40%;
+            width: auto;
+            cursor: pointer;
+            opacity: .8;
+        }
+
+        .btn__traduccion--img:hover{
+            opacity: 1;
         }
 
     /* --------------------header-------------------------- */
@@ -467,6 +512,11 @@ body{
 
     .footer__link{
         width: 20%;
+        opacity: .7;
+    }
+
+    .footer__link:hover{
+        opacity: 1;
     }
 
     .footer__social{
@@ -520,7 +570,7 @@ body{
     
     .navbar{
         width: auto;
-        position: relative;
+        position: static;
         grid-column: 2/12;
         padding: 0;
     }
@@ -584,6 +634,14 @@ body{
 
     .btn__menu{
         display: none;
+    }
+
+    /* --------------btn idioma-------------------------------- */
+
+    .btn__traduccion{
+        position: absolute;
+        top: 0;
+        left: 1em;
     }
 
     /* ------------------header----------------------------------- */
@@ -871,4 +929,4 @@ body{
     }
 }
 
-/* scroll , error menu, traduccion */
+/* scroll , traduccion , botones footer*/
