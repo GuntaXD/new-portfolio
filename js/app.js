@@ -1,5 +1,14 @@
 "use strict"
 
+//funcionalidades del loader
+
+let loader = document.querySelector(".loader");
+
+window.addEventListener("load",()=>{
+  loader.classList.toggle("desactive");
+});
+
+
 // funcion de las particulas
 
 particlesJS({
